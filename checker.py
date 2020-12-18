@@ -1,5 +1,5 @@
 
-#!/usr/bin/env python3
+#!/usr/bin/env python 3
 # -*- coding: utf-8 -*-
 
 #Define legit objects - Perhaps it would make sense to have it in a resource file
