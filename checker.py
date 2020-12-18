@@ -1,5 +1,5 @@
 
-#!/usr/bin/env python 3
+#!/usr/bin/env python 3.7
 # -*- coding: utf-8 -*-
 
 #Define legit objects - Perhaps it would make sense to have it in a resource file
@@ -16,6 +16,7 @@ LegitPhrasesAndHeads = [
 'CONJP',
 'WNP','WPP',
 #heads 
+'.*-N','.*-A','.*-D','.*-G',
 'N-N','N-A','N-D','N-G','N-.*',
 'NS-N','NS-A','NS-D','NS-G','NS-.*',
 'NPR-N','NPR-A','NPR-D','NPR-G','NPR-.*',
