@@ -1,0 +1,94 @@
+
+<html>
+  <head>
+    <title>Treebank Studio</title>
+
+    <script src="/static/corpald/js/codemirror.js"></script>
+    <script src="/static/corpald/js/mode/simple/simple.js"></script>
+    <script src="/static/corpald/js/jquery-2.1.3.min.js"></script>
+    <script src="/static/corpald/js/flot/jquery.flot.js"></script>
+
+    <script src="/static/corpald/js/corpald.js"></script>
+
+    <link rel="stylesheet" href="/static/corpald/css/codemirror.css">
+    <link rel="stylesheet" href="/static/corpald/css/corpald.css">
+    <link rel="stylesheet" href="/static/corpald/css/codemirror_theme/midnight.css">
+  </head>
+<body>
+
+<div id="container">
+
+  <div id='appname'>Treebank Studio (PREVIEW)</div>
+
+  <div id="topmenu">
+    <a class="menuitem" href="/">Search</a>
+    <a class="menuitem" href="/docs">Documentation</a>
+  </div>
+
+  
+  <ul>
+    <li> Treebank Studio is an online tool for searching parsed corpora using the PaCQL query language.
+    <li> The current preview version is configured to search IcePaHC (The Icelandic Parsed Historical Corpus).
+    <li> Look at the documentation page for advice on how to use PaCQL.
+  </ul>
+
+  <div id="querydiv">
+    <form id="query_form" method="post" action="api/query_plain">
+    <input type="hidden" id='offset' name="offset" value="0">
+    <input type="hidden" id='count' name="count" value="10">
+    <div style="height:30px;">
+      Search IcePaHC 0.9 (PaCQL):
+      <span style="float:right">
+     <span id="root_label"></span> <input type="checkbox" id="nodes_only" name="nodes_only" checked> Anchors only
+
+      <select id='format' name='format' style='margin-left:20px;'>
+	<option value='web'>Web output</option>
+	<option value='csv'>TSV</option>
+      </select>
+
+      </span>
+    </div>
+    <div>
+      <input type='hidden' name='csrfmiddlewaretoken' value='lfcRtd4r7xZgFFQLaq6parbLY45CK8NK' />
+      <textarea id="query" name="query">IP-(MAT|SUB) idoms MDPI
+
+ov:1
+MDPI sprec NP-OB[12]
+NP-OB[12] sprec VB   
+
+ov:0
+MDPI sprec VB
+VB sprec NP-OB[12]
+
+meta:
+text century
+node nodewords NP-OB[12]</textarea>
+</div><br>
+     <div id="buttondiv">
+      <input type="button" id="clearButton" value="Clear">
+      <input type="button" id="submitButton" value="Submit">
+     </div>
+    </form>
+  </div>
+
+  <div id="summary"></div>
+  <div id="results"></div>
+
+</div>
+  <div id='bottomThing'></div>
+
+
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62955825-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
