@@ -6,7 +6,22 @@
     <script src="/static/corpald/js/codemirror.js"></script>
     <script src="/static/corpald/js/mode/simple/simple.js"></script>
     <script src="/static/corpald/js/jquery-2.1.3.min.js"></script>
-    <script src="/static/corpald/js/flot/jquery.flot.js"></script>
+    <script src="/static/corpald/js/flot/jquery.flot.js"></script
+    
+<!-- 
+We add those three extra lines to the code, and put in the relevant files to the correct places:
+-->
+
+    <script src="/css-hint.js"></script>
+    <script src="/show-hint.js"></script>
+    <script src="/ICE-PaHC-hint.js"></script>
+ 
+ <!-- 
+That should do it!
+-->
+
+
+Read more: https://html.com/tags/comment-tag/#ixzz6h5cJ1Qcd
 
     <script src="/static/corpald/js/corpald.js"></script>
 
