@@ -2,6 +2,8 @@
 #!/usr/bin/env python 3.7
 # -*- coding: utf-8 -*-
 
+import difflib
+
 #Define legit objects - Perhaps it would make sense to have it in a resource file
 
 LegitPhrasesAndHeads = [
@@ -100,6 +102,8 @@ class Winput(object):
         Winput.CheckIfCaps (phrase) #call and check if the phrase is uppercase
         if phrase not in LegitPhrasesAndHeads:
             print (str(phrase) + " is not a legit phrase")
+            suggestion = difflib.get_close_matches(phrase, LegitPhrasesAndHeads)
+            print ("Does any of the following fit?: " + str(', '.join(suggestion)))
             pass
         pass
 
@@ -113,12 +117,14 @@ class Winput(object):
     def CheckIfRelation(relation):
         if relation not in LegitRelations:
             print(str(relation) + " is not a legit relation type") 
+            suggestion = difflib.get_close_matches(relation, LegitRelations)
+            print ("Does any of the following fit?: " + str(', '.join(suggestion)))
             pass
         pass
 
 #Here I put ten phrses to test the checker. Only one is correct, the other have different errors in it.
         
-text = "IP-MAT sproc MDPI\nIP-MAT sprec MDPI\nIP-MAT sprec MDPI\nIP-MAT sprecs MDPI\n\nBLEBLE"
+text = "IP-MAT sprac MDPI\nIP-MATs sprec MDPI\nIP-MAT sprec MDPI\nIP-MAT sprec MDPI\n\nBLEBLE"
 
 SplitToLines = Winput.OnlyPhrases(text)# Run splittolines
 CheckItemCountInLine = Winput.CountInLines (SplitToLines)# Run CheckItemCount
