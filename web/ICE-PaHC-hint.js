@@ -18,6 +18,53 @@
 
   // 
   var snippets = [
+  { text: 'IP-INF', displayText: 'infinitival' },
+  { text: 'IP-INF-PRP', displayText: 'purpose infinitival' },  
+  { text: 'IP-MAT', displayText: 'matrix' },
+  { text: 'IP-MAT-PRN', displayText: 'matrix, parenthetical' },
+  { text: 'IP-SUB', displayText: 'finite subordinate)' },
+  { text: 'IP-SUB-PRN', displayText: 'finite subordinate, parenthetical' },
+  { text: 'IP-IMP', displayText: 'imperative)' },
+  { text: 'IP-SMC', displayText: 'small clause)' },
+  { text: 'IP-PPL', displayText: 'participial)' },
+  { text: 'CP-THT', displayText: 'complement clause)' },
+  { text: 'CP-THT-PRN', displayText: 'parenthetical complement clause)' },
+  { text: 'CP-CAR', displayText: 'clause-adjoined relatives' },
+  { text: 'CP-CMP', displayText: 'comparative clause' },
+  { text: 'CP-CLF', displayText: 'it-cleft' },
+  { text: 'CP-DEG', displayText: 'degree complements' },
+  { text: 'CP-FRL', displayText: 'adverbial free relatives' },
+  { text: 'CP-REL', displayText: 'relative' },
+  { text: 'CP-QUE', displayText: 'indirect question' },
+  { text: 'CP-ADV', displayText: 'adverbial' },
+  { text: 'CP-EOP', displayText: 'empty Operator' },
+  { text: 'CP-TMC', displayText: 'tough-movement' },
+  { text: 'NP-ADV', displayText: 'adverbial noun phrases' },
+  { text: 'NP-CMP', displayText: 'dative comparative noun phrases ' },
+  { text: 'NP-PRN', displayText: 'appositive' },
+  { text: 'NP-SBJ', displayText: 'subject' },
+  { text: 'NP-OB1', displayText: 'direct object' },
+  { text: 'NP-OB2', displayText: 'indirect object' },
+  { text: 'NP-OB3', displayText: 'tertiary object' },
+  { text: 'NP-PRD', displayText: 'copular verbs object' },
+  { text: 'NP-COM', displayText: 'noun ophrase compements' },
+  { text: 'NP-ADT', displayText: 'clause-level dative adjuncts' },
+  { text: 'NP-TMP', displayText: 'noun phrases denoting a time' },
+  { text: 'NP-MSR', displayText: 'measure phrase' },
+  { text: '*CON*', displayText: 'conjunction reduction' },
+  { text: 'ADJP', displayText: 'adjective phrase' },
+  { text: 'ADJP-SPR', displayText: 'secondary predicate' },
+  { text: 'PP', displayText: 'prepositional phrase' },
+  { text: 'PP-BY', displayText: 'prepositional phrase with by' },
+  { text: 'PP-PRN', displayText: 'parenthetical preposition' },
+  { text: 'ADVP', displayText: 'adverbial phrase' },
+  { text: 'ADVP-DIR', displayText: 'directional adverb phrase' },
+  { text: 'ADVP-LOC', displayText: 'locative adverb phrases' },
+  { text: 'ADVP-TMP', displayText: 'temporal adverb phrases' },
+  { text: 'RP', displayText: 'adverbial particle' },
+  { text: 'CONJP', displayText: 'conjunction phrase' },
+  { text: 'WNP', displayText: 'wh- noun phrase' },
+  { text: 'WPP', displayText: 'wh- prepositional phrase' },
   { text: 'N-N', displayText: 'N-N - noun, nominative' },
   { text: 'N-A', displayText: 'N-A - noun, accusative' },
   { text: 'N-D', displayText: 'N-D - noun, dative' },
@@ -141,29 +188,13 @@
   { text: 'VAG', displayText: 'modal, present, participle' },
   { text: 'VBN', displayText: 'modal, past, participle' },
   { text: 'VAN', displayText: 'modal, passive, participle' },
-  { text: 'VBP', displayText: 'verb - present tense' }.
-  { text: 'VBD', displayText: 'verb - past tense' }.
-  { text: 'VBN', displayText: 'verb - past participle' }.
-  { text: 'VAN', displayText: 'passive participle' }.
-  { text: 'VAG', displayText: 'progressive participle' }.
-  { text: 'MD', displayText: 'modals' }.
-  { text: 'RD', displayText: 'verða - be' }.
-
-
-
-  'BEPI','BEPS','BEDI','BEDS','BEI','BAG','BEN','BAN','BE.*','B.*',
-'DOPI','DOPS','DODI','DODS','DOI','DAG','DON','DAN','DO.*','D.*',
-'HVPI','HVPS','HVDI','HVDS','HVI','HAG','HVN','HAN','HV.*','H.*',
-'MDPI','MDPS','MDDI','MDDS','MDI','MAG','MDN','MAN','MD.*','M.*',
-'RDPI','RDPS','RDDI','RDDS','RDI','RAG','RDN','RAN','RD.*','R.*',
-'VBPI','VBPS','VBDI','VBDS','VBI','VAG','VBN','VAN','VBP','VBD','VBN','VAN','VAG','VB.*','V.*'
-'.*PI','.*PS','.*DI','.*DS','.*DI',
-
-'MD','HV','RD','LS','FW'
-  
-  
-
-
+  { text: 'VBP', displayText: 'verb - present tense' },
+  { text: 'VBD', displayText: 'verb - past tense' },
+  { text: 'VBN', displayText: 'verb - past participle' },
+  { text: 'VAN', displayText: 'passive participle' },
+  { text: 'VAG', displayText: 'progressive participle' },
+  { text: 'MD', displayText: 'modals' },
+  { text: 'RD', displayText: 'verða - be' },
 ];
 
   function snippet() {
