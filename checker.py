@@ -9,7 +9,7 @@ import difflib
 LegitPhrasesAndHeads = [
 #Phrases
 'IP-INF','IP-MAT','IP-MAT-PRN','IP-SUB','IP-SUB-PRN','IP-IMP','IP-SMC','IP-PPL','IP-.*','IP-(MAT|SUB)',
-'CP-THT','CP-CAR','CP-CLF','CP-CMP','CP-DEG','CP-FRL','CP-REL','CP-QUE','CP-ADV','CP-EOP','CP-TMC','CP-.*','N+CP*',
+'CP-THT','CP-CAR','CP-CLF','CP-CMP','CP-DEG','CP-FRL','CP-REL','CP-QUE','CP-ADV','CP-EOP','CP-TMC','CP-.*',
 'NP','NP-ADV','NP-CMP','NP-PRN','NP-SBJ','NP-OB1','NP-OB2','NP-OB3','NP-PRD','NP-POS','NP-.*','NP*',
 'ADJP','ADJP-SPR','ADJP.*',
 'PP','PP-BY','PP-PRN','PP.*'
@@ -18,6 +18,7 @@ LegitPhrasesAndHeads = [
 'CONJP',
 'WNP','WPP',
 #heads 
+'0',
 '.*-N','.*-A','.*-D','.*-G',
 'N-N','N-A','N-D','N-G','N-.*',
 'NS-N','NS-A','NS-D','NS-G','NS-.*',
@@ -124,7 +125,7 @@ class Winput(object):
 
 #Here I put ten phrses to test the checker. Only one is correct, the other have different errors in it.
         
-text = "IP-MAT sprac MDPI\nIP-MATs sprec MDPI\nIP-MAT sprec MDPI\nIP-MAT sprec MDPI\n\nBLEBLE"
+text = "IP-MAT sprec MDPI\nIP-(MAT|SUB) idons NP-SBJ\nNP idoms MEDI\nADJS hassister NPRS-N\nPP-BV hassister NP-SBJ\nNP-SBJ idoms VBDI\nIP-MAT sprec OBJ1\nIP-MAT idomlast WADJ-A\nNPSR-N hassister PRO-N\nCP-THT idoms VBDD\n\n This is just something that will not be analysed"
 
 SplitToLines = Winput.OnlyPhrases(text)# Run splittolines
 CheckItemCountInLine = Winput.CountInLines (SplitToLines)# Run CheckItemCount
